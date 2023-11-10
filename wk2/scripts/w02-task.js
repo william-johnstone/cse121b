@@ -28,6 +28,6 @@ let foodplus = 'Chicken Sandwhich';
 foods.push(foodplus);
 foodElement.innerHTML += `<br>${foods}`;
 foods.shift();
-foodElement.innerHTML += `${foods}<br>`;
+foodElement.innerHTML += `<br>${foods}`;
 favFoods.pop();
 foodElement.innerHTML += `<br>${foods}`;
