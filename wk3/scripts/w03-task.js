@@ -69,7 +69,7 @@ function getTotalDue() {
     let discount = 0;
     const member = document.getElementById("member").value;
     if (document.getElementById('member').checked){
-        discount = .15;
+        discount = .2;//the assignment form says 15 but rubric says 20% so went with 20
     }
     else {
         discount = 0;
@@ -88,19 +88,36 @@ let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 document.getElementById("array").innerHTML = numbersArray;
 
 /* Output Odds Only Array */
-function getOdds(number) {
-    if (number % 2 === 0) {
-        return null;
-    }
-    else return number;
-}
-//////////////////////////////////////////////////////////////////////////////
-document.getElementById("odds").innerHTML = getOdds();
+var oddNumbers = numbersArray.filter(function(number){
+    return number % 2 !== 0;
+})
+document.getElementById('odds').innerHTML = oddNumbers;
 
 /* Output Evens Only Array */
+var evenNumbers = numbersArray.filter(function(number){
+    return number % 2 === 0;
+})
+document.getElementById('evens').innerHTML = evenNumbers;
 
 /* Output Sum of Org. Array */
-
+function sumArray(arr){
+    var sum = arr.reduce(function (adder, currentNumber){
+        return adder + currentNumber;
+    }, 0);
+    return sum;
+}
+var arraySum = sumArray(numbersArray);
+document.getElementById("sumOfArray").innerHTML = arraySum;
 /* Output Multiplied by 2 Array */
+//multiplied
+var multipliedNumbers = numbersArray.map(function(number) {
+    return number * 2;
+  });
 
+document.getElementById('multiplied').innerHTML = multipliedNumbers;
 /* Output Sum of Multiplied by 2 Array */
+//sumOfMultiplied
+var sumOfMultiplied = multipliedNumbers.reduce(function(added, currentValue) {
+    return added + currentValue;
+  }, 0);
+document.getElementById('sumOfMultiplied').innerHTML = sumOfMultiplied;
