@@ -1,6 +1,4 @@
-// fetch.js
 const url = "https://pokeapi.co/api/v2/pokemon/ditto";
-
 let results = null;
 async function getPokemon(url) {
   const response = await fetch(url);
@@ -13,11 +11,7 @@ async function getPokemon(url) {
   }
 }
 function doStuff(data) {
-  const outputElement = document.querySelector("#output");
   results = data;
-  const html = `<h2>${results.name}</h2>
-    <img src="${results.sprits.front_default}" alt="Image of ${results.name}">`;
-  outputElement.innerHTML = html;
   console.log("first: ", results);
 }
 getPokemon(url);
