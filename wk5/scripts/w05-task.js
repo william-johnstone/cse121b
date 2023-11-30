@@ -50,7 +50,7 @@ const reset = () => {
 let sortBy = (temples) => {
     // Call the reset function to clear the output
     reset();
-    const filter = document.getElementById('sortBy').value;
+    let filter = document.getElementById('sortBy').value;
 
     // Use a switch statement
     switch (filter) {
@@ -58,13 +58,13 @@ let sortBy = (temples) => {
         let utahTemples = temples.filter((temple) => temple.location.includes('Utah'));
         displayTemples(utahTemples);
         break;
-      case 'nonutah':
-        let nonUtahTemples = temples.filter((temple) => !temple.location.includes('Utah'));
+      case 'notutah':
+      let nonUtahTemples = temples.filter((temple) => !temple.location.includes('Utah'));
         displayTemples(nonUtahTemples);
         break;
       case 'older':
         //get temples by date of year before 1950
-        let olderTemples = temples.filter((temple) => new Date(temple.dedicatedDate) < new Date(1950, 0, 1));
+        let olderTemples = temples.filter((temple) => new Date(temple.dedicated).getFullYear() < 1950);
         displayTemples(olderTemples);
         break;
       case 'all':
