@@ -42,12 +42,8 @@ let getTemples = async() => {
 
 /* #6 reset Function */
 const reset = () => {
-  document.querySelector("temples").innerHTML="";  
-  let templesElement = document.getElementById('temples');
-
-  while (templesElement.firstChild) {
-    templesElement.removeChild(templesElement.firstChild);
-  }
+  const templesElement = document.getElementById('temples');
+  templesElement.innerHTML = '';
   };
 
 /* #7 sortBy Function */
