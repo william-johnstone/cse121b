@@ -28,8 +28,7 @@ function copyToClipboard() {
 
     // Select the text in the textarea
     sqlScriptTextarea.select();
-    sqlScriptTextarea.setSelectionRange(0, 99999); // For mobile devices
-
+    sqlScriptTextarea.setSelectionRange(0, 99999);
     // Copy the text to the clipboard
     document.execCommand("copy");
 
