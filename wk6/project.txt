@@ -1,6 +1,6 @@
 Fix Data with SQL - Examples Site
 I will create a site that has a set of a few different common problems people may encounter when dealing with large data sets.
-The site will have a way to select from a few options that are stored in an array.
-If an option is selected the site will display some pre-built queries as well as a picture.
-The picture will come from fetching at random from the place.dog site https://place.dog/
+The site will have a way to select from a few options.
+If an option is selected the site will display some pre-built queries as well as a quote.
+The picture will come from fetching at random from 'https://animechan.xyz/api/random'
 There may be some links to other useful sites like w3schools

@@ -28,7 +28,8 @@
 
     <label for="scriptSelector">Select SQL Script:</label>
     <select id="scriptSelector" onchange="updateScript()">
-        <option value="removeDuplicates">Remove Duplicates</option>
+        <option value="nothing">Nothing</option>
+        <option value="findDuplicates">Find Duplicates</option>
         <option value="fixGuarantors">Fix Guarantors</option>
         <option value="trimExtraSpace">Trim Extra Space</option>
     </select>
@@ -36,8 +37,14 @@
     <textarea id="sqlScript" readonly></textarea>
 
     <button onclick="copyToClipboard()">Copy to Clipboard</button>
-
-
+    <div id="quote-container">
+        <p id="quote-text">Loading...</p>
+        <button onclick="fetchRandomAnimeQuote()">Get Random Quote</button>
+    </div>
+    <h2>Helpful SQL Sites</h1>
+    <ul id="sql-sites-list">
+        <!-- The list will be dynamically inserted here -->
+    </ul>
     <script src="scripts/scripts.js"></script>
 </body>
 </html>
